@@ -1,6 +1,3 @@
-
-from entities.customer_abs import Customer
-from entities.customer_persone import Persone
 from interfaces.services import GetInfo
 
 
