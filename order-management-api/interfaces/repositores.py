@@ -1,21 +1,20 @@
 from abc import ABC,abstractmethod
-from core_business.use_cases.entities.order import Order,OrderModel
-from core_business.use_cases.entities.customer_persone import Persone,PersoneModel
+from entities.order import Order,OrderModel
+from entities.customer_persone import Persone,PersoneModel
 
 class OrderRepository(ABC):
     @abstractmethod
-    def check_avaibility(self,qte,item):
+    def check_avaibility(self,qte,item_id):
         pass
     @abstractmethod
-    def tax(self):
+    def tax(self,rate):
         pass
     @abstractmethod
     def subtoatl(self,item:Order):
         pass
     @abstractmethod
-    def check_balance(self,customer:Persone):
+    def check_balance(self,customer_id):
         pass
-        
 
 class GetCustomerRepository(ABC):
     @abstractmethod
